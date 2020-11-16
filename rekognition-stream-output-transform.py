@@ -13,8 +13,6 @@ def lambda_handler(event, context):
     for record in event['records']:
         print(record['recordId'])
         payload = base64.b64decode(record['data'])
-
-        # Do custom processing on the payload here
         
         payload_dict = json.loads(payload)
         parsed_payload = dict()

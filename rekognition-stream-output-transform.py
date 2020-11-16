@@ -32,8 +32,6 @@ def lambda_handler(event, context):
         })
 
         enc_parsed_payload = json.dumps(parsed_payload, indent=2).encode('utf-8')
-        
-        # Do custom processing on the payload here
 
         output_record = {
             'recordId': record['recordId'],
